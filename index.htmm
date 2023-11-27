@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calculator project</title>
+    <style>
+    
+        body {
+            background-image: url(../calculadora.jpg);
+            display: flex;
+            align-items: right;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            
+        }
+
+        h2 {
+            
+            text-align: center;
+            color: #000000;
+            padding-left: 30%;
+        }
+
+        h1 {
+            
+            
+            color: #000000;
+            padding-left: 30%;
+        }
+        button {
+            
+            
+            color: #968b8b;
+        }
+        
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin: 2px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input:hover {
+            background-color: #e6e6e6;
+        }
+
+        input:active {
+            background-color: #d9d9d9;
+        }
+
+        #display {
+            width: 202px;
+            height: 50px;
+            font-size: 18px;
+            text-align: right;
+            margin: 2px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h2>Calculadora online</h2>
+    
+    
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="display" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="addToDisplay('7')"></td>
+            <td><input type="button" value="8" onclick="addToDisplay('8')"></td>
+            <td><input type="button" value="9" onclick="addToDisplay('9')"></td>
+            <td><input type="button" value="/" onclick="addToDisplay('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="addToDisplay('4')"></td>
+            <td><input type="button" value="5" onclick="addToDisplay('5')"></td>
+            <td><input type="button" value="6" onclick="addToDisplay('6')"></td>
+            <td><input type="button" value="*" onclick="addToDisplay('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="addToDisplay('1')"></td>
+            <td><input type="button" value="2" onclick="addToDisplay('2')"></td>
+            <td><input type="button" value="3" onclick="addToDisplay('3')"></td>
+            <td><input type="button" value="-" onclick="addToDisplay('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="addToDisplay('0')"></td>
+            <td><input type="button" value="." onclick="addToDisplay('.')"></td>
+            <td><input type="button" value="+" onclick="addToDisplay('+')"></td>
+            <td><input type="button" value="=" onclick="calculate()"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="button" value="C" onclick="clearDisplay()"></td>
+        </tr>
+    </table>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
